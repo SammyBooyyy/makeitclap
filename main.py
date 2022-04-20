@@ -13,7 +13,10 @@ def tentar():
                 print(F.LIGHTYELLOW_EX + r.text)
 
             def clear():
-                os.system('cls')
+                if os.system == 'nt':
+                    os.system('cls')
+                else:
+                    os.system('clear')
 
             def main():
                 clear()
